@@ -364,33 +364,26 @@
     <div class="container">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
+        <img src="static/images/mainpipeline.png" alt="Main Pipeline" loading="lazy"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
-          First image description.
+          The system operates in two distinct stages: a preprocessing phase and a real-time controller. The real-time controller utilizes user input and the current character pose to construct a query vector, which is then compared against the query features. Simultaneously, environment features guide the search by computing dynamic obstacle penalizations. From each pose, we extract three categories of features: pose features, trajectory features, and environment features. Pose and trajectory features are defined similarly to those used in existing Motion Matching implementations. We introduce environment features that enable an environment-aware pose search. We collectively refer to pose and trajectory features as query features, as they will be compared against a similarly defined query vector that encapsulates our target feature values. In contrast, environment features are not directly compared to a predefined query vector. Instead, they are used to compute penalization factors based on a dynamic analysis of the surrounding scene. 
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/eval_mm_emm_disk.png" alt="Comparison of body representations and environmental awareness" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Comparison of body representations and environmental awareness. The top row illustrates our method using ellipses, where characters adapt their poses (e.g., sidestepping) to navigate past each other. The middle row shows our method using disks, demonstrating how characters become stuck due to the limited expressive power of disk approximation. The bottom row presents standard Motion Matching, where characters completely ignore each other and collide, highlighting its lack of environmental awareness
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
+        <img src="static/images/door_crowd.png" alt="Crowd agents navigating doors of different widths and responsiveness settings" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+         Crowd agents navigating doors of different widths and responsiveness settings. The green corridor (1.85m wide) shows characters passing with little torso rotation. The red corridor (0.9m wide) often requires sidestepping. Top row: Agents prioritize crossing quickly (high Responsiveness), demonstrating more direct, yet still adaptive, paths. Bottom row: Agents are less rushed (low Responsiveness), leading to more pronounced avoidance behaviors and larger clearance.
        </h2>
      </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
 </div>
 </div>
 </section>
