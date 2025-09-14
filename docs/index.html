@@ -327,7 +327,7 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Traditional character animation techniques often struggle to handle arbitrary situations, leading to a growing trend of dynamically selecting motion-captured animations based on predefined features. While Motion Matching has proven effective for locomotion by aligning to target trajectories, animating environment interactions and crowd behaviors remains challenging due to the need to consider surrounding elements. Existing approaches often involve manual setup or lack the naturalism of motion capture. Furthermore, in crowd animation, body animation is frequently treated as a separate process from trajectory planning, leading to inconsistencies between body pose and root motion. To address these limitations, we present \emph{Environment-aware Motion Matching}, a novel real-time system for full-body character animation that dynamically adapts to obstacles and other agents, emphasizing the bidirectional relationship between pose and trajectory. In a preprocessing step, we extract shape, pose, and trajectory features from a motion capture database. At runtime, we perform an efficient search that matches user input and current pose while penalizing collisions with a dynamic environment. Our method allows characters to naturally adjust their pose and trajectory to navigate crowded scenes.   
+            Traditional character animation techniques often struggle to handle arbitrary situations, leading to a growing trend of dynamically selecting motion-captured animations based on predefined features. While Motion Matching has proven effective for locomotion by aligning to target trajectories, animating environment interactions and crowd behaviors remains challenging due to the need to consider surrounding elements. Existing approaches often involve manual setup or lack the naturalism of motion capture. Furthermore, in crowd animation, body animation is frequently treated as a separate process from trajectory planning, leading to inconsistencies between body pose and root motion. To address these limitations, we present Environment-aware Motion Matching, a novel real-time system for full-body character animation that dynamically adapts to obstacles and other agents, emphasizing the bidirectional relationship between pose and trajectory. In a preprocessing step, we extract shape, pose, and trajectory features from a motion capture database. At runtime, we perform an efficient search that matches user input and current pose while penalizing collisions with a dynamic environment. Our method allows characters to naturally adjust their pose and trajectory to navigate crowded scenes.   
           </p>
         </div>
       </div>
@@ -378,49 +378,6 @@
   </div>
 </section>
 
-<!-- Comparison Section -->
-<section class="section is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-  <div class="column is-three-quarters">
-        <div class="content">
-          <h2 class="title is-3">Comparison of Body Representations and Environmental Awareness</h2>
-          <center>
-            <img src="static/images/eval_mm_emm_disk.png" alt="Comparison of body representations and environmental awareness" class="center-image" loading="lazy"/>
-          </center>
-          <div class="level-set has-text-justified">
-            <p>
-              The top row illustrates our method using ellipses, where characters adapt their poses (e.g., sidestepping) to navigate past each other. The middle row shows our method using disks, demonstrating how characters become stuck due to the limited expressive power of disk approximation. The bottom row presents standard Motion Matching, where characters completely ignore each other and collide, highlighting its lack of environmental awareness.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Crowd Navigation Section -->
-<section class="section is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-  <div class="column is-three-quarters">
-        <div class="content">
-          <h2 class="title is-3">Crowd Navigation: Responsiveness and Clearance</h2>
-          <center>
-            <img src="static/images/door_crowd.png" alt="Crowd agents navigating doors of different widths and responsiveness settings" class="center-image" loading="lazy"/>
-          </center>
-          <div class="level-set has-text-justified">
-            <p>
-              Crowd agents navigate doors of different widths and responsiveness settings. The green corridor (1.85m wide) shows characters passing with little torso rotation. The red corridor (0.9m wide) often requires sidestepping. Top row: Agents prioritize crossing quickly (high Responsiveness), demonstrating more direct, yet still adaptive, paths. Bottom row: Agents are less rushed (low Responsiveness), leading to more pronounced avoidance behaviors and larger clearance.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End method and results overview sections -->
-
 <!-- Video Results Overview Section -->
 <section class="section is-small is-light">
   <div class="container is-max-desktop">
@@ -434,7 +391,7 @@
             </p>
           </div>
           <div class="video-demo-block">
-            <h3 class="title is-5">Narrow Corridor Navigation</h3>
+            <h3 class="title is-5" style="margin-top:2.5em;">Narrow Corridor Navigation</h3>
             <center>
               <video poster="" controls muted loop preload="metadata" style="width:100%;max-width:600px;">
                 <source src="static/videos/Fig12_NarrowCorridor.mp4" type="video/mp4">
@@ -448,7 +405,7 @@
             </div>
           </div>
           <div class="video-demo-block">
-            <h3 class="title is-5">Zigzag Path Following</h3>
+            <h3 class="title is-5" style="margin-top:2.5em;">Zigzag Path Following</h3>
             <center>
               <video poster="" controls muted loop preload="metadata" style="width:100%;max-width:600px;">
                 <source src="static/videos/Fig13_Zigzag.mp4" type="video/mp4">
@@ -462,7 +419,7 @@
             </div>
           </div>
           <div class="video-demo-block">
-            <h3 class="title is-5">Multi-Character Corridor Interaction</h3>
+            <h3 class="title is-5" style="margin-top:2.5em;">Multi-Character Corridor Interaction</h3>
             <center>
               <video poster="" controls muted loop preload="metadata" style="width:100%;max-width:600px;">
                 <source src="static/videos/Fig16_Multi_Character_Corridor.mp4" type="video/mp4">
@@ -476,7 +433,7 @@
             </div>
           </div>
           <div class="video-demo-block">
-            <h3 class="title is-5">Adapting to Moving Cubes</h3>
+            <h3 class="title is-5" style="margin-top:2.5em;">Adapting to Moving Cubes</h3>
             <center>
               <video poster="" controls muted loop preload="metadata" style="width:100%;max-width:600px;">
                 <source src="static/videos/Fig14_MovingCubes.mp4" type="video/mp4">
@@ -490,7 +447,7 @@
             </div>
           </div>
             <div class="video-demo-block">
-              <h3 class="title is-5">Avoiding a Moving Car</h3>
+              <h3 class="title is-5" style="margin-top:2.5em;">Avoiding a Moving Car</h3>
               <center>
                 <video poster="" controls muted loop preload="metadata" style="width:100%;max-width:600px;">
                   <source src="static/videos/Fig15_MovingCar.mp4" type="video/mp4">
@@ -504,7 +461,7 @@
               </div>
             </div>
               <div class="video-demo-block">
-                <h3 class="title is-5">Agent Interaction: Different Speeds</h3>
+                <h3 class="title is-5" style="margin-top:2.5em;">Agent Interaction: Different Speeds</h3>
                 <center>
                   <video poster="" controls muted loop preload="metadata" style="width:100%;max-width:600px;">
                     <source src="static/videos/Fig17_Agent_Interaction.mp4" type="video/mp4">
@@ -518,7 +475,7 @@
                 </div>
               </div>
               <div class="video-demo-block">
-                <h3 class="title is-5">Jumping Over Obstacles</h3>
+                <h3 class="title is-5" style="margin-top:2.5em;">Jumping Over Obstacles</h3>
                 <center>
                   <video poster="" controls muted loop preload="metadata" style="width:100%;max-width:600px;">
                     <source src="static/videos/Fig18_Jumping.mp4" type="video/mp4">
@@ -532,7 +489,7 @@
                 </div>
               </div>
               <div class="video-demo-block">
-                <h3 class="title is-5">Crouching Under Ceilings</h3>
+                <h3 class="title is-5" style="margin-top:2.5em;">Crouching Under Ceilings</h3>
                 <center>
                   <video poster="" controls muted loop preload="metadata" style="width:100%;max-width:600px;">
                     <source src="static/videos/Fig19_Crouching.mp4" type="video/mp4">
@@ -546,7 +503,7 @@
                 </div>
               </div>
               <div class="video-demo-block">
-                <h3 class="title is-5">Prop Weapon Adaptation</h3>
+                <h3 class="title is-5" style="margin-top:2.5em;">Prop Weapon Adaptation</h3>
                 <center>
                   <video poster="" controls muted loop preload="metadata" style="width:100%;max-width:600px;">
                     <source src="static/videos/Fig20_Prop.mp4" type="video/mp4">
@@ -560,7 +517,7 @@
                 </div>
               </div>
               <div class="video-demo-block">
-                <h3 class="title is-5">Carrying a Large Box</h3>
+                <h3 class="title is-5" style="margin-top:2.5em;">Carrying a Large Box</h3>
                 <center>
                   <video poster="" controls muted loop preload="metadata" style="width:100%;max-width:600px;">
                     <source src="static/videos/Fig21_Box.mp4" type="video/mp4">
@@ -574,7 +531,7 @@
                 </div>
               </div>
               <div class="video-demo-block">
-                <h3 class="title is-5">Locomotion Style Adaptation</h3>
+                <h3 class="title is-5" style="margin-top:2.5em;">Locomotion Style Adaptation</h3>
                 <center>
                   <video poster="" controls muted loop preload="metadata" style="width:100%;max-width:600px;">
                     <source src="static/videos/Fig22_LocomotionStyle.mp4" type="video/mp4">
