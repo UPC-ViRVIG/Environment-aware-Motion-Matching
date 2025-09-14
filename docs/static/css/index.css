@@ -104,7 +104,7 @@ body {
 }
 
 .teaser .hero-body {
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 4rem;
 }
 
@@ -148,7 +148,7 @@ body {
 .publication-authors {
   font-family: 'Inter', sans-serif !important;
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .publication-venue {
