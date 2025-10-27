@@ -1,8 +1,8 @@
 <div align="center">
 
-# Environment-aware Motion Matching (SIGGRAPH Asia 2025)
+# Environment-aware Motion Matching <br> SIGGRAPH Asia 2025
 
-Jose Luis Ponton (UPC), Sheldon Andrews (ÉTS Montréal), Carlos Andujar (UPC), Nuria Pelechano (UPC)
+[Jose Luis Ponton](https://joseluisponton.com/) (UPC), [Sheldon Andrews](https://profs.etsmtl.ca/sandrews/) (ÉTS Montréal), [Carlos Andujar](https://www.cs.upc.edu/~virtual/home/index.html) (UPC), [Nuria Pelechano](https://www.cs.upc.edu/~npelechano/) (UPC)
 
 [Project page](https://upc-virvig.github.io/Environment-aware-Motion-Matching/) | [Paper (ACM DL)](https://doi.org/10.1145/3763334) | [Video](https://youtu.be/u8LISEkGsyk) | [Data (Zenodo)](https://zenodo.org/records/17220516)
 
@@ -20,7 +20,8 @@ This repository contains the Unity project used in the paper presented at SIGGRA
 
 ## Quick start (Unity)
 
-- Tested with Unity 6.2 (Editor version 6000.2.7f2). Other versions may work.
+> [!NOTE] 
+> Tested with Unity 6.2 (Editor version 6000.2.7f2). Other versions may work.
 
 1) Install Unity: https://unity.com/download
 
@@ -46,10 +47,10 @@ Scenes are under `Unity/Assets/EnvironmentMotionMatching/Scenes`:
 
 - EMM_PolygonAssets
 	- Uses third‑party low‑poly assets for the environments, as shown in figures/videos. If you own these packages, import them and re-open the scenes:
-		- [POLYGON Prototype (used in most scenes)](https://assetstore.unity.com/packages/essentials/tutorial-projects/polygon-prototype-low-poly-3d-art-by-synty-137126)
-		- [POLYGON City (crowd/multi-agent scenes)](https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214)
-		- [POLYGON Office (only used in the box scene)](https://assetstore.unity.com/packages/3d/props/interior/polygon-office-low-poly-3d-art-by-synty-159492)
-		- [POLYGON Heist (only used in the weapon scene)](https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-poly-3d-art-by-synty-97949)
+		- [POLYGON Prototype](https://assetstore.unity.com/packages/essentials/tutorial-projects/polygon-prototype-low-poly-3d-art-by-synty-137126) (used in most scenes)
+		- [POLYGON City](https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214) (crowd/multi-agent scenes)
+		- [POLYGON Office](https://assetstore.unity.com/packages/3d/props/interior/polygon-office-low-poly-3d-art-by-synty-159492) (only used in the box scene)
+		- [POLYGON Heist](https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-poly-3d-art-by-synty-97949) (only used in the weapon scene)
 
 ## Data
 
