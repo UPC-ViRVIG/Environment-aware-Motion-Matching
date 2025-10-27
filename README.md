@@ -2,7 +2,10 @@
 
 # Environment-aware Motion Matching <br> SIGGRAPH Asia 2025
 
-[Jose Luis Ponton](https://joseluisponton.com/) (UPC), [Sheldon Andrews](https://profs.etsmtl.ca/sandrews/) (ÉTS Montréal), [Carlos Andujar](https://www.cs.upc.edu/~virtual/home/index.html) (UPC), [Nuria Pelechano](https://www.cs.upc.edu/~npelechano/) (UPC)
+[Jose Luis Ponton](https://joseluisponton.com/)^1, [Sheldon Andrews](https://profs.etsmtl.ca/sandrews/)^2, [Carlos Andujar](https://www.cs.upc.edu/~virtual/home/index.html)^1, [Nuria Pelechano](https://www.cs.upc.edu/~npelechano/)^1
+
+^1 [Universitat Politècnica de Catalunya (UPC)](https://www.upc.edu/en)  
+^2 [École de technologie supérieure (ÉTS Montréal)](https://www.etsmtl.ca/)
 
 [Project page](https://upc-virvig.github.io/Environment-aware-Motion-Matching/) | [Paper (ACM DL)](https://doi.org/10.1145/3763334) | [Video](https://youtu.be/u8LISEkGsyk) | [Data (Zenodo)](https://zenodo.org/records/17220516)
 
