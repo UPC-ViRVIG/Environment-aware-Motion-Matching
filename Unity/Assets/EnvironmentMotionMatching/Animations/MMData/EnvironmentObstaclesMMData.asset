@@ -1,0 +1,232 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0bb4b3a7b78d847be4e6490640196f, type: 3}
+  m_Name: EnvironmentObstaclesMMData
+  m_EditorClassIdentifier: 
+  AnimationDatas:
+  - {fileID: 11400000, guid: c7601cc16bcb0ab41b73b2fc989934d2, type: 2}
+  - {fileID: 11400000, guid: b4fdfde20cc642a4d8a3ab151b38ee9b, type: 2}
+  - {fileID: 11400000, guid: 09250a56deda8164691d591229fa1dcc, type: 2}
+  - {fileID: 11400000, guid: cf0deb8a4902043408e31b7a31bcbcbf, type: 2}
+  - {fileID: 11400000, guid: b456702ed2dff204d92416416ff0abd4, type: 2}
+  - {fileID: 11400000, guid: 50d08acfd17fdfd45ae7c1918ca1de65, type: 2}
+  - {fileID: 11400000, guid: b1dc927fd1cfc464884d6d66cfe3736e, type: 2}
+  - {fileID: 11400000, guid: 6a8a493e8a45edd48ba6736fca2e147b, type: 2}
+  - {fileID: 11400000, guid: 0218f75077d12954eaf5385ec56d36c2, type: 2}
+  - {fileID: 11400000, guid: 3ddfd19d0185eab4781aba52bded8746, type: 2}
+  - {fileID: 11400000, guid: 785dc3b318adc914d96ba44d52ee4048, type: 2}
+  - {fileID: 11400000, guid: ac1c791fa4248c24ea41869ae901f46b, type: 2}
+  - {fileID: 11400000, guid: 4f8049e1b06be9d489b4bb8627a0e222, type: 2}
+  - {fileID: 11400000, guid: 8294a515c3d1d404684957649ba6237d, type: 2}
+  - {fileID: 11400000, guid: 65df533aacc4e654ea640629e19c3efd, type: 2}
+  - {fileID: 11400000, guid: 70784ffc9f327f8438544b234cbdadc0, type: 2}
+  - {fileID: 11400000, guid: 158cb00d8d461334da134dba32171214, type: 2}
+  - {fileID: 11400000, guid: 2e68bf8f8d149c04798d87686889b57f, type: 2}
+  - {fileID: 11400000, guid: bbcdb01204d2362458ff8ee60f0e2b61, type: 2}
+  - {fileID: 11400000, guid: 22da7e4c298999f449c3464832eca0da, type: 2}
+  - {fileID: 11400000, guid: 9ee20b02b608d0441a4bd9d4ab7b43fe, type: 2}
+  - {fileID: 11400000, guid: cb937910f6b01054fb982aca53baa237, type: 2}
+  - {fileID: 11400000, guid: 58d65e239b5b37a47bee719888103158, type: 2}
+  - {fileID: 11400000, guid: 1cebea30fa06ab84e856d35f8c10abd7, type: 2}
+  - {fileID: 11400000, guid: 04e74eced9aae774baceb36335ed25b1, type: 2}
+  - {fileID: 11400000, guid: bfecfdb5d79d4f640be412546c56ef14, type: 2}
+  - {fileID: 11400000, guid: a153dadb28cd4834c9ebf3840fa1cae7, type: 2}
+  - {fileID: 11400000, guid: 07f603a5a4e59564b86d35f4fa39dbb5, type: 2}
+  - {fileID: 11400000, guid: a4fb5010afda0de4cac8f85e3c2a7ffd, type: 2}
+  - {fileID: 11400000, guid: e3225c37a8ab3ed4891fdfcac4967698, type: 2}
+  - {fileID: 11400000, guid: 071d17ec867f35b46b34cf98679e1a57, type: 2}
+  - {fileID: 11400000, guid: 03345e34681ed4f46992e47ead1c8aca, type: 2}
+  - {fileID: 11400000, guid: fb4509bcbb6e61047a8a7d22af0fd129, type: 2}
+  - {fileID: 11400000, guid: cea8b1208f625fc45886a63449884d4a, type: 2}
+  - {fileID: 11400000, guid: d8374ea2a96f51943a6e3e527c3f0693, type: 2}
+  - {fileID: 11400000, guid: 7848c1b5989705b45b364efb222344ce, type: 2}
+  - {fileID: 11400000, guid: 2f20d8c06f8203d4b9a8d39c86fab6bd, type: 2}
+  - {fileID: 11400000, guid: 2eac4ba2326c24340b7162d70f647929, type: 2}
+  - {fileID: 11400000, guid: ded29b38230ae814583152a4f7e36066, type: 2}
+  AnimationDataTPose: {fileID: 11400000, guid: fca747247a861144091bc336469b039a, type: 2}
+  HipsForwardLocalVector:
+    x: 0
+    y: 0.11042806
+    z: -0.99388444
+  HipsUpLocalVector:
+    x: 0
+    y: 0.99388415
+    z: 0.11042806
+  ContactVelocityThreshold: 0.15
+  SkeletonToMecanim:
+  - Name: Hips
+    MecanimBone: 0
+  - Name: Chest
+    MecanimBone: 7
+  - Name: Chest2
+    MecanimBone: 8
+  - Name: Chest3
+    MecanimBone: 54
+  - Name: Chest4
+    MecanimBone: 55
+  - Name: Neck
+    MecanimBone: 9
+  - Name: Head
+    MecanimBone: 10
+  - Name: RightCollar
+    MecanimBone: 12
+  - Name: RightShoulder
+    MecanimBone: 14
+  - Name: RightElbow
+    MecanimBone: 16
+  - Name: RightWrist
+    MecanimBone: 18
+  - Name: LeftCollar
+    MecanimBone: 11
+  - Name: LeftShoulder
+    MecanimBone: 13
+  - Name: LeftElbow
+    MecanimBone: 15
+  - Name: LeftWrist
+    MecanimBone: 17
+  - Name: RightHip
+    MecanimBone: 2
+  - Name: RightKnee
+    MecanimBone: 4
+  - Name: RightAnkle
+    MecanimBone: 6
+  - Name: RightToe
+    MecanimBone: 20
+  - Name: LeftHip
+    MecanimBone: 1
+  - Name: LeftKnee
+    MecanimBone: 3
+  - Name: LeftAnkle
+    MecanimBone: 5
+  - Name: LeftToe
+    MecanimBone: 19
+  TrajectoryFeatures:
+  - Name: FuturePosition
+    FeatureType: 0
+    FramesPrediction: 14000000280000003c000000
+    SimulationBone: 1
+    Bone: 0
+    ZeroX: 0
+    ZeroY: 1
+    ZeroZ: 0
+    FeatureExtractor: {fileID: 0}
+    IsMainPositionFeature: 1
+  - Name: FutureDirection
+    FeatureType: 1
+    FramesPrediction: 14000000280000003c000000
+    SimulationBone: 1
+    Bone: 0
+    ZeroX: 0
+    ZeroY: 1
+    ZeroZ: 0
+    FeatureExtractor: {fileID: 0}
+    IsMainPositionFeature: 0
+  PoseFeatures:
+  - Name: LeftFootPosition
+    FeatureType: 0
+    Bone: 5
+  - Name: LeftFootVelocity
+    FeatureType: 1
+    Bone: 5
+  - Name: RightFootPosition
+    FeatureType: 0
+    Bone: 6
+  - Name: RightFootVelocity
+    FeatureType: 1
+    Bone: 6
+  - Name: HipsVelocity
+    FeatureType: 1
+    Bone: 0
+  EnvironmentFeatures:
+  - Name: FutureEllipse
+    FeatureType: 4
+    FramesPrediction: 14000000280000003c000000
+    SimulationBone: 0
+    Bone: 0
+    ZeroX: 0
+    ZeroY: 0
+    ZeroZ: 0
+    FeatureExtractor: {fileID: 11400000, guid: 8eacf7dfb5807a64f91121234119017d, type: 2}
+    IsMainPositionFeature: 0
+  JointsLocalForward:
+  - x: 0
+    y: 0
+    z: 1
+  - x: 0
+    y: 0.11043152
+    z: -0.9938837
+  - x: 0
+    y: 0
+    z: -1
+  - x: 0
+    y: -0.10151368
+    z: -0.9948341
+  - x: 0
+    y: -0.1016163
+    z: -0.9948237
+  - x: 0
+    y: 0.000000007450581
+    z: -1
+  - x: 0
+    y: 0.21831731
+    z: -0.9758778
+  - x: 0
+    y: 0.058722094
+    z: -0.9982744
+  - x: 0
+    y: 0.000000007450581
+    z: -1
+  - x: -0.99999994
+    y: 4.440892e-16
+    z: -0.000000059604645
+  - x: -0.99918795
+    y: 3.1544536e-10
+    z: 0.040289782
+  - x: -0.99999994
+    y: 4.440892e-16
+    z: -0.000000059604645
+  - x: 0
+    y: 0.000000007450581
+    z: -1
+  - x: 0.99999994
+    y: -4.440892e-16
+    z: 0.000000059604645
+  - x: 0.99918795
+    y: 3.1544445e-10
+    z: 0.0402899
+  - x: 0.99999994
+    y: -4.440892e-16
+    z: 0.000000059604645
+  - x: 0
+    y: 0.04796392
+    z: -0.9988491
+  - x: 0
+    y: 0.08057766
+    z: -0.9967483
+  - x: 0
+    y: -0.000000014901161
+    z: -1
+  - x: 0
+    y: -0.000000014901161
+    z: -1
+  - x: 0
+    y: 0.04802144
+    z: -0.9988463
+  - x: 0
+    y: 0.08121233
+    z: -0.9966968
+  - x: 0
+    y: -0.000000014901161
+    z: -1
+  - x: 0
+    y: -0.000000014901161
+    z: -1
