@@ -270,7 +270,7 @@ public class EnvironmentMotionMatchingSearch : MotionMatchingSearch
 
     public override float OnUpdateEnvironmentFeatureWeight(MotionMatchingController controller, TrajectoryFeature dynamicFeature, float defaultWeight)
     {
-        return math.max(defaultWeight * Anticipation * controller.CharacterController.GetTargetSpeed(), defaultWeight * 0.5f);
+        return defaultWeight * Anticipation * math.max(0.5f, controller.CharacterController.GetTargetSpeed());
     }
 
     public override void Dispose()
