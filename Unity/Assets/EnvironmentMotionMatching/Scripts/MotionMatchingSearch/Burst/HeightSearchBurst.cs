@@ -10,6 +10,8 @@ using MotionMatching;
 [BurstCompile]
 public struct CrowdHeightMotionMatchingSearchBurst : IJob
 {
+    private const float MinEllipseExtent = 1e-5f;
+
     [ReadOnly] public NativeArray<bool> Valid;
     [ReadOnly] public NativeArray<bool> TagMask;
     [ReadOnly] public NativeArray<float> Features;
@@ -76,7 +78,7 @@ public struct CrowdHeightMotionMatchingSearchBurst : IJob
 #endif
         distance = math.max(distance - ObstaclesCircles[obstacle].Item2, UtilitiesBurst.MAX_INSIDE_ELLIPSE);
         float penalization = DistanceFunction(distance, ObstacleDistanceThreshold) * penalizationFactor;
-        
+
         if (saveDebug && distance < ObstacleDistanceThreshold)
         {
             PointsOnEllipse[NumberDebugPoints[0]] = new float3(closest.x, 0.0f, closest.y);
@@ -96,19 +98,23 @@ public struct CrowdHeightMotionMatchingSearchBurst : IJob
         float2 centerEllipse2 = ObstaclesEllipses[obstacle].Item1;
         float2 primaryAxis2 = ObstaclesEllipses[obstacle].Item2;
         float2 secondaryAxis2 = ObstaclesEllipses[obstacle].Item3;
-        float2 ellipse2 = new(math.length(primaryAxis2), math.length(secondaryAxis2));
+        float primaryExtent2 = math.max(math.length(primaryAxis2), MinEllipseExtent);
+        float secondaryExtent2 = math.max(math.length(secondaryAxis2), MinEllipseExtent);
+        float2 ellipse2 = new(primaryExtent2, secondaryExtent2);
+        float2 primaryAxisUnit2 = primaryAxis2 / primaryExtent2;
+        float2 secondaryAxisUnit2 = secondaryAxis2 / secondaryExtent2;
 
 #if USE_FAST_DISTANCE
             float distance = UtilitiesBurst.FastDistanceEllipseToEllipse(centerEllipse, primaryAxisUnit, secondaryAxisUnit, ellipse,
-                                                                         centerEllipse2, primaryAxis2 / ellipse2.x, secondaryAxis2 / ellipse2.y, ellipse2,
+                                         centerEllipse2, primaryAxisUnit2, secondaryAxisUnit2, ellipse2,
                                                                          out float2 closest1, out float2 closest2, fastDistanceAngle);
 #else
         float distance = UtilitiesBurst.DistanceEllipseToEllipse(centerEllipse, primaryAxisUnit, secondaryAxisUnit, ellipse,
-                                                                 centerEllipse2, primaryAxis2 / ellipse2.x, secondaryAxis2 / ellipse2.y, ellipse2,
+                                     centerEllipse2, primaryAxisUnit2, secondaryAxisUnit2, ellipse2,
                                                                  out float2 closest1, out float2 closest2, fastDistanceAngle, maxIterationsRootFinder);
 #endif
         float penalization = DistanceFunction(distance, ObstacleDistanceThreshold) * penalizationFactor;
-        
+
         if (saveDebug && distance < ObstacleDistanceThreshold)
         {
             PointsOnEllipse[NumberDebugPoints[0]] = new float3(closest1.x, 0.0f, closest1.y);
@@ -141,17 +147,21 @@ public struct CrowdHeightMotionMatchingSearchBurst : IJob
         float3 ellipseFeatures2 = new(Features[featureStaticIndex + 3], Features[featureStaticIndex + 4], Features[featureStaticIndex + 5]);
         float3 ellipseFeatures3 = new(Features[featureStaticIndex + 6], Features[featureStaticIndex + 7], Features[featureStaticIndex + 8]);
 
-        float2 primaryAxisUnit1 = math.normalize(ellipseFeatures1.xy);
-        float2 primaryAxisUnit2 = math.normalize(ellipseFeatures2.xy);
-        float2 primaryAxisUnit3 = math.normalize(ellipseFeatures3.xy);
+        float primaryExtent1 = math.max(math.length(ellipseFeatures1.xy), MinEllipseExtent);
+        float primaryExtent2 = math.max(math.length(ellipseFeatures2.xy), MinEllipseExtent);
+        float primaryExtent3 = math.max(math.length(ellipseFeatures3.xy), MinEllipseExtent);
+
+        float2 primaryAxisUnit1 = ellipseFeatures1.xy / primaryExtent1;
+        float2 primaryAxisUnit2 = ellipseFeatures2.xy / primaryExtent2;
+        float2 primaryAxisUnit3 = ellipseFeatures3.xy / primaryExtent3;
 
         float2 secondaryAxisUnit1 = new(-primaryAxisUnit1.y, primaryAxisUnit1.x);
         float2 secondaryAxisUnit2 = new(-primaryAxisUnit2.y, primaryAxisUnit2.x);
         float2 secondaryAxisUnit3 = new(-primaryAxisUnit3.y, primaryAxisUnit3.x);
 
-        float2 ellipse1 = new(math.length(ellipseFeatures1.xy), ellipseFeatures1.z);
-        float2 ellipse2 = new(math.length(ellipseFeatures2.xy), ellipseFeatures2.z);
-        float2 ellipse3 = new(math.length(ellipseFeatures3.xy), ellipseFeatures3.z);
+        float2 ellipse1 = new(primaryExtent1, math.max(math.abs(ellipseFeatures1.z), MinEllipseExtent));
+        float2 ellipse2 = new(primaryExtent2, math.max(math.abs(ellipseFeatures2.z), MinEllipseExtent));
+        float2 ellipse3 = new(primaryExtent3, math.max(math.abs(ellipseFeatures3.z), MinEllipseExtent));
 
         float2 height1 = new(Features[featureStaticIndex + 9], Features[featureStaticIndex + 10]);
         float2 height2 = new(Features[featureStaticIndex + 11], Features[featureStaticIndex + 12]);
